@@ -1,0 +1,12 @@
+#program to reverse a string using recursion 
+def reverseString(s):
+    #if only one char remains just return it 
+    if len(s) == 1: 
+        return s[0]
+    
+    firstchar = s[0]
+    #get the already reversed string and add first char to end
+    return reverseString(s[1:]) + firstchar
+
+s = "Ankit Jadli"
+print(reverseString(s))
